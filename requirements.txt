@@ -1,0 +1,25 @@
+# Railway backend requirements
+# NOTE: torch + transformers are required for the KA2L GPT-2 router.
+# Railway deploys with ~4GB disk and 512MB–8GB RAM depending on plan.
+# The GPT-2 model (~500MB) is downloaded on first run and cached.
+
+fastapi==0.133.0
+uvicorn[standard]==0.40.0
+python-multipart==0.0.20
+
+# Groq LLM judge + agent
+groq==1.0.0
+litellm==1.60.0
+
+# CrewAI agent framework
+crewai==1.9.3
+
+# KA2L router (GPT-2 local inference)
+transformers==5.1.0
+torch==2.10.0
+
+# Eval pipeline
+pandas==2.3.3
+
+# Utilities
+python-dotenv==1.1.1

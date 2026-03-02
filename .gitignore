@@ -1,0 +1,43 @@
+# Secrets — never commit
+.env
+keys.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+evalops-env/
+
+# Ollama binaries (large, not needed in repo)
+ollama_bin/
+ollama*.tgz
+start_ollama_Version2.sh
+
+# Logs & runtime output
+*.log
+n8n_log.txt
+n8n_output.log
+ollama_log.txt
+
+# Policy backups
+*.bak
+
+# Eval snapshots (generated at runtime)
+eval_results.json
+eval_results_v2.json
+
+# Data volumes
+n8n_data/
+qdrant_data/
+langfuse_data/
+
+# Misc
+get-pip.py
+Figures/
