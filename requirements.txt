@@ -15,8 +15,9 @@ litellm==1.60.0
 crewai==1.9.3
 
 # KA2L router (GPT-2 local inference)
-transformers==5.1.0
-torch==2.10.0
+# transformers 4.45.x uses tokenizers>=0.20,<0.22 — compatible with crewai's tokenizers<=0.20.3
+transformers==4.45.2
+torch==2.4.1
 
 # Eval pipeline
 pandas==2.3.3
