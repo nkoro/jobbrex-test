@@ -1,0 +1,20 @@
+run = "bash start.sh"
+entrypoint = "start.sh"
+modules = ["python-3.10"]
+
+[nix]
+channel = "stable-24_05"
+
+# Replit exposes only one external port.
+# Streamlit serves on this port; FastAPI binds on 8000 (internal only).
+[[ports]]
+localPort = 8501
+externalPort = 80
+
+[[ports]]
+localPort = 8000
+externalPort = 3000
+
+[deployment]
+run = ["sh", "-c", "bash start.sh"]
+deploymentTarget = "cloudrun"
